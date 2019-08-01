@@ -2,11 +2,41 @@
   font-family: sans-serif;
 }
 
+.titulo {
+  color: azure;
+}
 .margem {
-  width: 80%;
+  width: 400px;
   -webkit-box-shadow: 3px 10px 23px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 10px 23px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 10px 23px 0px rgba(0, 0, 0, 0.75);
-  padding: 30px;
-  margin-top: 20%;
+  padding: 40px;
+  border-radius: 20px;
+  background: white;
+  max-width: 100%;
+}
+
+.espaco-btn {
+  margin: 5px !important;
+}
+
+.container-image {
+  background: rgb(95, 95, 244);
+  background: linear-gradient(
+    90deg,
+    rgba(95, 95, 244, 0.9724264705882353) 0%,
+    rgba(138, 138, 214, 1) 0%,
+    rgba(115, 189, 244, 0.9051995798319328) 100%
+  );
+}
+
+.container-nosso {
+  height: 1000px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.margem-nova {
+  padding-top: 20px;
 }

@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 import "./bootstrap.min.css";
 import "./bootstrap.min.js";
+
 //componene: funcional component
 function App() {
   //Entrada, Rodando, Fim
@@ -27,8 +28,10 @@ function App() {
 
   if (estado === "ENTRADA") {
     return (
-      <div className="container">
+      <div className="container-nosso container-image">
         <center>
+          <h1 className="margem-nova titulo">Bem-vindo ao jogo!</h1>
+          <hr />
           <div className="margem">
             <p>Escolha um número entre 0 e 300!</p>
             <p>Escolheu? Então vamos começar...</p>
@@ -61,8 +64,10 @@ function App() {
 
   if (estado === "FIM") {
     return (
-      <div className="container">
+      <div className="container-nosso container-image">
         <center>
+          <h1 className="margem-nova titulo">Consegui!</h1>
+          <hr />
           <div className="margem">
             <p>
               Acertei o número {palpite} com {numPalpites} chutes!
@@ -77,19 +82,32 @@ function App() {
   }
 
   return (
-    <div className="container">
+    <div className="container-nosso container-image">
       <center>
+        <h1 className="margem-nova titulo">Vamos lá...</h1>
+        <hr />
         <div className="App">
           <div className="margem">
             <p>O seu número é {palpite}?</p>
-            <button className="btn btn-outline-primary" onClick={menor}>
-              {" "}
+            <button
+              id="btn-menor"
+              className="btn btn-primary espaco-btn"
+              onClick={menor}
+            >
               Menor
             </button>
-            <button className="btn btn-outline-success" onClick={acertou}>
+            <button
+              id="btn-acertou"
+              className="btn btn-success espaco-btn"
+              onClick={acertou}
+            >
               Acertou!
             </button>
-            <button className="btn btn-outline-primary" onClick={maior}>
+            <button
+              id="btn-maior"
+              className="btn btn-primary espaco-btn"
+              onClick={maior}
+            >
               Maior
             </button>
           </div>
