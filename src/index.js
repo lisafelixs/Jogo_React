@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import { Navbar, NavbarBrand } from "reactstrap";
 
 import "./styles.css";
 import "./bootstrap.min.css";
 import "./bootstrap.min.js";
+
+const Header = () => {
+  return (
+    <Navbar>
+      <NavbarBrand>
+        ReactJS <img className="icon" src="/imagens/React.png" />
+      </NavbarBrand>
+    </Navbar>
+  );
+};
 
 //componene: funcional component
 function App() {
@@ -29,8 +40,9 @@ function App() {
   if (estado === "ENTRADA") {
     return (
       <div className="container-nosso container-image">
+        <Header />
         <center>
-          <h1 className="margem-nova titulo">Bem-vindo ao jogo!</h1>
+          <h1 className="titulo">Bem-vindo ao jogo!</h1>
           <hr />
           <div className="margem">
             <p>Escolha um número entre 0 e 300!</p>
@@ -65,8 +77,9 @@ function App() {
   if (estado === "FIM") {
     return (
       <div className="container-nosso container-image">
+        <Header />
         <center>
-          <h1 className="margem-nova titulo">Consegui!</h1>
+          <h1 className="titulo">Consegui!</h1>
           <hr />
           <div className="margem">
             <p>
@@ -83,8 +96,9 @@ function App() {
 
   return (
     <div className="container-nosso container-image">
+      <Header />
       <center>
-        <h1 className="margem-nova titulo">Vamos lá...</h1>
+        <h1 className="titulo">Vamos lá...</h1>
         <hr />
         <div className="App">
           <div className="margem">
