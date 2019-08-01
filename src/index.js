@@ -61,21 +61,40 @@ function App() {
 
   if (estado === "FIM") {
     return (
-      <div>
-        <p>
-          Acertei o número {palpite} com {numPalpites} chutes!
-        </p>
-        <button onClick={iniciarJogo}>Jogar Novamente</button>
+      <div className="container">
+        <center>
+          <div className="margem">
+            <p>
+              Acertei o número {palpite} com {numPalpites} chutes!
+            </p>
+            <button className="btn btn-primary" onClick={iniciarJogo}>
+              Jogar Novamente
+            </button>
+          </div>
+        </center>
       </div>
     );
   }
 
   return (
-    <div className="App">
-      <p>O seu número é {palpite}?</p>
-      <button onClick={menor}> Menor</button>
-      <button onClick={acertou}>Acertou!</button>
-      <button onClick={maior}>Maior</button>
+    <div className="container">
+      <center>
+        <div className="App">
+          <div className="margem">
+            <p>O seu número é {palpite}?</p>
+            <button className="btn btn-outline-primary" onClick={menor}>
+              {" "}
+              Menor
+            </button>
+            <button className="btn btn-outline-success" onClick={acertou}>
+              Acertou!
+            </button>
+            <button className="btn btn-outline-primary" onClick={maior}>
+              Maior
+            </button>
+          </div>
+        </div>
+      </center>
     </div>
   );
 }
