@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
 import "./styles.css";
-
+import "./bootstrap.min.css";
+import "./bootstrap.min.js";
 //componene: funcional component
 function App() {
   //Entrada, Rodando, Fim
@@ -12,6 +13,7 @@ function App() {
   const [palpite, setPalpite] = useState(150);
   const [numPalpites, setNumPalpites] = useState(1);
 
+  //0<>300
   const [min, setMin] = useState(0);
   const [max, setMax] = useState(300);
 
@@ -25,10 +27,16 @@ function App() {
 
   if (estado === "ENTRADA") {
     return (
-      <div>
-        <p>Escolha um número entre 0 e 300!</p>
-        <p>Escolheu? Então vamos começar...</p>
-        <button onClick={iniciarJogo}>Começar</button>
+      <div className="container">
+        <center>
+          <div className="margem">
+            <p>Escolha um número entre 0 e 300!</p>
+            <p>Escolheu? Então vamos começar...</p>
+            <button className="btn btn-primary" onClick={iniciarJogo}>
+              Começar
+            </button>
+          </div>
+        </center>
       </div>
     );
   }
@@ -61,8 +69,7 @@ function App() {
       </div>
     );
   }
-  //0<>300
-  //palpites que a maquina deu
+
   return (
     <div className="App">
       <p>O seu número é {palpite}?</p>
