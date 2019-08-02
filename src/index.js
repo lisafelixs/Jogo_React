@@ -10,9 +10,37 @@ const Header = () => {
   return (
     <Navbar>
       <NavbarBrand>
-        ReactJS <img className="icon" src="/imagens/React.png" />
+        ReactJS <img className="icon" src="/imagens/React.png" alt="ReactJS" />
       </NavbarBrand>
     </Navbar>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className="margem-footer">
+      <center>
+        <p className="paragrafo">Follow me</p>
+        <a
+          className="icon-footer"
+          href="https://www.instagram.com/lisafelixs/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/imagens/Insta.png" alt="instagram" />
+          @lisafelixs
+        </a>
+        <a
+          className="icon-footer"
+          href="https://github.com/lisafelixs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="/imagens/Git.png" alt="github" />
+          Lisafelixs
+        </a>
+      </center>
+    </div>
   );
 };
 
@@ -52,6 +80,7 @@ function App() {
             </button>
           </div>
         </center>
+        <Footer />
       </div>
     );
   }
@@ -90,6 +119,7 @@ function App() {
             </button>
           </div>
         </center>
+        <Footer />
       </div>
     );
   }
@@ -127,6 +157,7 @@ function App() {
           </div>
         </div>
       </center>
+      <Footer />
     </div>
   );
 }

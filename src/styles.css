@@ -40,3 +40,16 @@
 .icon {
   margin-top: -5px;
 }
+
+.margem-footer {
+  padding: 30px;
+}
+
+.icon-footer {
+  margin: 5px;
+  color: azure;
+}
+
+.paragrafo {
+  margin-bottom: 1px;
+}
